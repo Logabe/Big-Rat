@@ -14,8 +14,13 @@ const sayHello = (message) => {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("hello")
-    .setDescription("Say Hello To me!"),
+    .setDescription("Say hello to the rat."),
   execute: async (interaction, client) => {
-    return interaction.reply('Ee, ' + getNameE(interaction.user.username) + '!');
+    var i = Math.floor(Math.random() * 2);
+    if(i = 0){
+      return interaction.reply('Ee, ' + getNameE(interaction.user.username) + '!');
+    } else if(i = 0){
+      return interaction.reply('Eeeee, ' + getNameE(interaction.user.username) + '!');
+    }
   },
 };
