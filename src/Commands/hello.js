@@ -12,9 +12,10 @@ const sayHello = (message) => {
 };
 
 module.exports = {
-  name: "hello",
-  description: "Says hello to the sender",
-  execute: (message, args) => {
-    message.reply('hello');
+  data: new SlashCommandBuilder()
+    .setName("hello")
+    .setDescription("Say Hello To me!"),
+  execute: async (interaction, client) => {
+    return interaction.reply(sayHello(getNameE(interaction.message.content)));
   },
 };
