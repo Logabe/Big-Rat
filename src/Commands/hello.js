@@ -6,12 +6,15 @@ const getNameE = (message) => {
   return message.replace(/[a-zA-Z]/g, "e");
 };
 
-//Replace every letter in the senders name with the letter 'e'
+//Say hello to the sender
+const sayHello = (message) => {
+  return "Eeeee " + message + "!";
+};
+
 module.exports = {
-  data: new SlashCommandBuilder()
-    .setName("hello")
-    .setDescription("Say Hello to the rat!"),
-  execute: async (interaction, client) => {
-    return interaction.reply("Eeeee, " + getNameE(interaction.message.author) +"!");
+  name: "hello",
+  description: "Says hello to the sender",
+  execute: (message, args) => {
+    message.reply(sayHello(getNameE(message.author.username)));
   },
 };
