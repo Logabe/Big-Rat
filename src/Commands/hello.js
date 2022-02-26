@@ -15,6 +15,6 @@ module.exports = {
   name: "hello",
   description: "Says hello to the sender",
   execute: (message, args) => {
-    message.reply(sayHello(getNameE(message.author.username)));
+    message.reply('hello');
   },
 };
