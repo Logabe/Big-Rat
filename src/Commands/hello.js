@@ -1,5 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
+//Get the sender's name
+
 const getNameE = (message) => {
   return message.replace(/[a-zA-Z]/g, "e");
 };
@@ -10,6 +12,6 @@ module.exports = {
     .setName("hello")
     .setDescription("Say Hello to the rat!"),
   execute: async (interaction, client) => {
-    return interaction.reply("Eeeee, " + interaction.message.replace(/[a-zA-Z]/g, "e") +"!");
+    return interaction.reply("Eeeee, " + getNameE(interaction.message.author) +"!");
   },
 };
