@@ -16,6 +16,6 @@ module.exports = {
     .setName("hello")
     .setDescription("Say Hello To me!"),
   execute: async (interaction, client) => {
-    return interaction.reply(sayHello(getNameE(interaction.User.username)));
+    return interaction.reply(sayHello(getNameE(interaction.user.username)));
   },
 };
