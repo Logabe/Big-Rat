@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
 const getName = (message) => {
-  if (message.guild) {
+  if (message.guild != null) {
     return message.member.displayName;
   } else {
     return message.author.username;
