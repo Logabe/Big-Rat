@@ -9,7 +9,7 @@ const getName = (message) => {
 };
 
 const getNameE = (message) => {
-  return getName(message).replace(/[a-zA-Z]/g, "e");
+  return message.replace(/[a-zA-Z]/g, "e");
 };
 
 //Replace every letter in the senders name with the letter 'e'
@@ -18,6 +18,6 @@ module.exports = {
     .setName("hello")
     .setDescription("Say Hello to the rat!"),
   execute: async (interaction, client) => {
-    return interaction.reply("Eeeee, " + getNameE(interaction.message) +"!");
+    return interaction.reply("Eeeee, " + getNameE(interaction.message.replace(/[a-zA-Z]/g, "e")) +"!");
   },
 };
