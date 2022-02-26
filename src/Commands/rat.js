@@ -1,7 +1,7 @@
 const { MessageAttachment, MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
-const file = new MessageAttachment('Media/bigrat.png');
+const file = new MessageAttachment('./Media/bigrat.png');
 
 const embed = new MessageEmbed()
 	.setTitle('big rat')
