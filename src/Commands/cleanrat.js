@@ -5,7 +5,7 @@ const file = new MessageAttachment('./Media/cleanrat.gif');
 
 const embed = new MessageEmbed()
 	.setTitle('clean rat')
-	.setImage('attachment://bigrat.png');
+	.setImage('attachment://cleanrat.gif');
 
 module.exports = {
     data: new SlashCommandBuilder()

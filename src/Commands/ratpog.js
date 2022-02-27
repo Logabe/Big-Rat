@@ -1,11 +1,11 @@
 const { MessageAttachment, MessageEmbed } = require('discord.js');
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
-const file = new MessageAttachment('./Media/ratpog.png');
+const file = new MessageAttachment('./Media/ratpog.jpg');
 
 const embed = new MessageEmbed()
 	.setTitle('rat pog')
-	.setImage('attachment://bigrat.png');
+	.setImage('attachment://ratpog.jpg');
 
 module.exports = {
     data: new SlashCommandBuilder()
